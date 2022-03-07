@@ -36,7 +36,7 @@ An application built to test our knowledge with the modules learned during the f
 
 7. Under Construction Page - for future features
 
-<img src="Images/underConstruction.png" alt="drawing" width="250"/>
+<img src="Images/underconstruction.png" alt="drawing" width="250"/>
 
 
 
