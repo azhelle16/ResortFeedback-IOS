@@ -17,7 +17,7 @@ struct r {
     static let surveyNibName = "SurveyOptionsCollectionViewCell"
     static let surveyCellIdentifier = "SurveyChoiceCell"
     static let foodCellIdentifier = "FoodViewCell"
-    static let foodNibName = "FoodSurveyTableViewCell"
+    static let foodNibName = "FoodTableViewCell"
     static let foodSegue = "FoodSurvey"
     static let foodRateCellIdentifier = "FoodRatingViewCell"
     static let foodRateNibName = "FoodRatingTableViewCell"
@@ -25,23 +25,14 @@ struct r {
 
     static let questions = [
         "1. The food is served fresh and hot.",
-        "",
         "2. The menu has a good variety of items.",
-        "",
         "3. The quality of food is excellent.",
-        "",
         "4. The food is tasty and flavorful.",
-        "",
         "5. The quality of beverages is excellent.",
-        "",
         "6. My food order was correct and complete.",
-        "",
         "7. Employees are patient when taking my order.",
-        "",
         "8. I was served promptly.",
-        "",
         "9. Availability of sauces, utensils, napkins, etc. was good.",
-        "",
         "10. The menu board was easy to read."
 //        "11. Employees speak clearly.",
 //        "12. Employees are friendly and courteous.",

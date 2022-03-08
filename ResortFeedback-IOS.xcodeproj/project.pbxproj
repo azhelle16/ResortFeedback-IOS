@@ -28,12 +28,10 @@
 		9A53932F27D53D070018CACC /* SurveyOptionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53932D27D53D070018CACC /* SurveyOptionsCollectionViewCell.swift */; };
 		9A53933027D53D070018CACC /* SurveyOptionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A53932E27D53D070018CACC /* SurveyOptionsCollectionViewCell.xib */; };
 		9A53933627D561880018CACC /* FoodSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53933527D561880018CACC /* FoodSurveyViewController.swift */; };
-		9A53933B27D5654F0018CACC /* FoodSurveyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53933927D5654F0018CACC /* FoodSurveyTableViewCell.swift */; };
-		9A53933C27D5654F0018CACC /* FoodSurveyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A53933A27D5654F0018CACC /* FoodSurveyTableViewCell.xib */; };
-		9A53933F27D594F00018CACC /* FoodRatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53933D27D594F00018CACC /* FoodRatingTableViewCell.swift */; };
-		9A53934027D594F00018CACC /* FoodRatingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A53933E27D594F00018CACC /* FoodRatingTableViewCell.xib */; };
 		9A53934327D5B73F0018CACC /* FoodSurvey+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53934127D5B73F0018CACC /* FoodSurvey+CoreDataClass.swift */; };
 		9A53934427D5B73F0018CACC /* FoodSurvey+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53934227D5B73F0018CACC /* FoodSurvey+CoreDataProperties.swift */; };
+		9A96BDC427D7B0E9009905A0 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96BDC227D7B0E9009905A0 /* FoodTableViewCell.swift */; };
+		9A96BDC527D7B0E9009905A0 /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A96BDC327D7B0E9009905A0 /* FoodTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,12 +58,10 @@
 		9A53932D27D53D070018CACC /* SurveyOptionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyOptionsCollectionViewCell.swift; sourceTree = "<group>"; };
 		9A53932E27D53D070018CACC /* SurveyOptionsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyOptionsCollectionViewCell.xib; sourceTree = "<group>"; };
 		9A53933527D561880018CACC /* FoodSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSurveyViewController.swift; sourceTree = "<group>"; };
-		9A53933927D5654F0018CACC /* FoodSurveyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSurveyTableViewCell.swift; sourceTree = "<group>"; };
-		9A53933A27D5654F0018CACC /* FoodSurveyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSurveyTableViewCell.xib; sourceTree = "<group>"; };
-		9A53933D27D594F00018CACC /* FoodRatingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRatingTableViewCell.swift; sourceTree = "<group>"; };
-		9A53933E27D594F00018CACC /* FoodRatingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodRatingTableViewCell.xib; sourceTree = "<group>"; };
 		9A53934127D5B73F0018CACC /* FoodSurvey+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodSurvey+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9A53934227D5B73F0018CACC /* FoodSurvey+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodSurvey+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9A96BDC227D7B0E9009905A0 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		9A96BDC327D7B0E9009905A0 /* FoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
 		9AE8185427D5D0D800C49554 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,10 +123,8 @@
 				9A53932527D5285B0018CACC /* HomeCollectionViewCell.xib */,
 				9A53932D27D53D070018CACC /* SurveyOptionsCollectionViewCell.swift */,
 				9A53932E27D53D070018CACC /* SurveyOptionsCollectionViewCell.xib */,
-				9A53933927D5654F0018CACC /* FoodSurveyTableViewCell.swift */,
-				9A53933A27D5654F0018CACC /* FoodSurveyTableViewCell.xib */,
-				9A53933D27D594F00018CACC /* FoodRatingTableViewCell.swift */,
-				9A53933E27D594F00018CACC /* FoodRatingTableViewCell.xib */,
+				9A96BDC227D7B0E9009905A0 /* FoodTableViewCell.swift */,
+				9A96BDC327D7B0E9009905A0 /* FoodTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,10 +209,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A53932727D5285B0018CACC /* HomeCollectionViewCell.xib in Resources */,
+				9A96BDC527D7B0E9009905A0 /* FoodTableViewCell.xib in Resources */,
 				9A53933027D53D070018CACC /* SurveyOptionsCollectionViewCell.xib in Resources */,
 				9A14482627D332FC0004D4E3 /* LaunchScreen.storyboard in Resources */,
-				9A53934027D594F00018CACC /* FoodRatingTableViewCell.xib in Resources */,
-				9A53933C27D5654F0018CACC /* FoodSurveyTableViewCell.xib in Resources */,
 				9A14482327D332FC0004D4E3 /* Assets.xcassets in Resources */,
 				9A14481E27D332F90004D4E3 /* Main.storyboard in Resources */,
 			);
@@ -242,12 +235,11 @@
 				9A53934327D5B73F0018CACC /* FoodSurvey+CoreDataClass.swift in Sources */,
 				9A14483C27D362690004D4E3 /* DBManager.swift in Sources */,
 				9A14481727D332F90004D4E3 /* AppDelegate.swift in Sources */,
-				9A53933F27D594F00018CACC /* FoodRatingTableViewCell.swift in Sources */,
 				9A53932627D5285B0018CACC /* HomeCollectionViewCell.swift in Sources */,
 				9A53931127D48F550018CACC /* HomeViewController.swift in Sources */,
 				9A53933627D561880018CACC /* FoodSurveyViewController.swift in Sources */,
-				9A53933B27D5654F0018CACC /* FoodSurveyTableViewCell.swift in Sources */,
 				9A14483927D362220004D4E3 /* User+CoreDataClass.swift in Sources */,
+				9A96BDC427D7B0E9009905A0 /* FoodTableViewCell.swift in Sources */,
 				9A14481927D332F90004D4E3 /* SceneDelegate.swift in Sources */,
 				9A14483A27D362220004D4E3 /* User+CoreDataProperties.swift in Sources */,
 				9A53931327D493540018CACC /* Constants.swift in Sources */,

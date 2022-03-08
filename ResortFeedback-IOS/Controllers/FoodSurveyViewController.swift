@@ -20,20 +20,13 @@ class FoodSurveyViewController: UIViewController {
         // Do any additional setup after loading the view.
         foodTableView.delegate = self
         foodTableView.dataSource = self
+//        foodTableView.register(UINib(nibName: r.foodNibName, bundle: nil), forCellReuseIdentifier: r.foodCellIdentifier)
+//        foodTableView.register(UINib(nibName: r.foodRateNibName, bundle: nil), forCellReuseIdentifier: r.foodRateCellIdentifier)
         foodTableView.register(UINib(nibName: r.foodNibName, bundle: nil), forCellReuseIdentifier: r.foodCellIdentifier)
-        foodTableView.register(UINib(nibName: r.foodRateNibName, bundle: nil), forCellReuseIdentifier: r.foodRateCellIdentifier)
         
     }
     
     @IBAction func submitFoodResponse(_ sender: UIButton) {
-        
-//        print(UserData.tallyScore)
-//        var tally : Int = 0
-//        for (key, value) in UserData.tallyScore {
-//            tally += value
-//        }
-//
-//        print("FINAL TALLY: \(tally)")
         
         let isSuccess = DBManager.inst.addUserFoodTally(u: UserData.userInfo, t: UserData.tallyScore.description)
         
@@ -45,7 +38,7 @@ class FoodSurveyViewController: UIViewController {
             
         } else {
             
-            showAlertDialog(dtype: "Alert", msg: "Response Not Successfully Created", style: "alert", controller: "")
+            showAlertDialog(dtype: "Alert", msg: "Response Not Successfully Saved.", style: "alert", controller: "")
           
           }
         
@@ -99,7 +92,8 @@ extension FoodSurveyViewController: UITableViewDataSource {
         
             case 0:
                 //print("ROWS: ",r.questions.count * 2)
-                return r.questions.count+1
+                //return r.questions.count + 1
+            return min(r.questions.count, 15)
             default:
                 return 0
             
@@ -113,40 +107,23 @@ extension FoodSurveyViewController: UITableViewDataSource {
             
             case 0:
             
-                if indexPath.row % 2 == 0 {
-                        
-                    let cell = tableView.dequeueReusableCell(withIdentifier: r.foodCellIdentifier, for: indexPath) as! FoodSurveyTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: r.foodCellIdentifier, for: indexPath) as! FoodTableViewCell
                 
-                    cell.question.text = r.questions[indexPath.row]
-
-                    return cell
-                    
-                } else {
-                      
-                    let cell = tableView.dequeueReusableCell(withIdentifier: r.foodRateCellIdentifier, for: indexPath) as! FoodRatingTableViewCell
-
-                   var qNum : Int = 0
-                    if indexPath.row == 1 {
-                        qNum = indexPath.row
-                    } else {
-                        qNum = indexPath.row-1
-                     }
-                    cell.fRateImage1.accessibilityIdentifier = String(qNum)+"-1"
-                    cell.fRateImage2.accessibilityIdentifier = String(qNum)+"-2"
-                    cell.fRateImage3.accessibilityIdentifier = String(qNum)+"-3"
-                    cell.fRateImage4.accessibilityIdentifier = String(qNum)+"-4"
-                    cell.fRateImage5.accessibilityIdentifier = String(qNum)+"-5"
-                    cell.fRateImage1.alpha = 0.3
-                    cell.fRateImage2.alpha = 0.3
-                    cell.fRateImage3.alpha = 0.3
-                    cell.fRateImage4.alpha = 0.3
-                    cell.fRateImage5.alpha = 0.3
-                    
-                    return cell
-                        
-                  }
-                
+                cell.question.text = r.questions[indexPath.row]
+                let qNum = indexPath.row
+                cell.fRateImage1.accessibilityIdentifier = String(qNum)+"-1"
+                cell.fRateImage2.accessibilityIdentifier = String(qNum)+"-2"
+                cell.fRateImage3.accessibilityIdentifier = String(qNum)+"-3"
+                cell.fRateImage4.accessibilityIdentifier = String(qNum)+"-4"
+                cell.fRateImage5.accessibilityIdentifier = String(qNum)+"-5"
+                cell.fRateImage1.alpha = 0.3
+                cell.fRateImage2.alpha = 0.3
+                cell.fRateImage3.alpha = 0.3
+                cell.fRateImage4.alpha = 0.3
+                cell.fRateImage5.alpha = 0.3
             
+                return cell
+                
             default:
                 let defCell = tableView.dequeueReusableCell(withIdentifier: r.foodCellIdentifier, for: indexPath)
                 print("no default")
@@ -165,5 +142,59 @@ extension FoodSurveyViewController: UITableViewDataSource {
 }
 
 extension FoodSurveyViewController: UITableViewDelegate {
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+//        if UserData.tallyScore.count != 0 {
+//            for key in UserData.tallyScore.keys{
+//                let indexPath = IndexPath(row: Int(key)!, section: 0)
+//                let cell = foodTableView.cellForRow(at: indexPath) as? FoodTableViewCell
+//                let selected = UserData.tallyScore[key]
+//
+//                switch selected {
+//                    case 1:
+//                        cell?.fRateImage1.alpha = 1
+//                    case 2:
+//                        cell?.fRateImage2.alpha = 1
+//                    case 3:
+//                        cell?.fRateImage3.alpha = 1
+//                    case 4:
+//                        cell?.fRateImage4.alpha = 1
+//                    default:
+//                        cell?.fRateImage5.alpha = 1
+//                }
+//
+//            }
+//
+//        }
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    
+        if UserData.tallyScore.count != 0 {
+            for key in UserData.tallyScore.keys{
+                let indexPath = IndexPath(row: Int(key)!, section: 0)
+                let cell = foodTableView.cellForRow(at: indexPath) as? FoodTableViewCell
+                let selected = UserData.tallyScore[key]
+
+                switch selected {
+                    case 1:
+                        cell?.fRateImage1.alpha = 1
+                    case 2:
+                        cell?.fRateImage2.alpha = 1
+                    case 3:
+                        cell?.fRateImage3.alpha = 1
+                    case 4:
+                        cell?.fRateImage4.alpha = 1
+                    default:
+                        cell?.fRateImage5.alpha = 1
+                }
+
+            }
+
+        }
+        
+    }
     
 }

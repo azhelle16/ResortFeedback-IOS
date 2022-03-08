@@ -1,14 +1,16 @@
 //
-//  FoodRatingTableViewCell.swift
+//  FoodTableViewCell.swift
 //  ResortFeedback-IOS
 //
-//  Created by Maricel Sumulong on 3/6/22.
+//  Created by Maricel Sumulong on 3/8/22.
 //
 
 import UIKit
 
-class FoodRatingTableViewCell: UITableViewCell {
+class FoodTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var question: UILabel!
+    
     @IBOutlet weak var fRateImage1: UIButton!
     @IBOutlet weak var fRateImage2: UIButton!
     @IBOutlet weak var fRateImage3: UIButton!
@@ -44,9 +46,8 @@ class FoodRatingTableViewCell: UITableViewCell {
 //            print("\(key) : \(value)")
 //        }
         
-        
-        
     }
+    
     
     
 }

@@ -490,7 +490,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8d-OE-hPf">
-                                <rect key="frame" x="0.0" y="688" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="685" width="414" height="60"/>
                                 <color key="backgroundColor" name="BrandBrightRed"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="bJ0-JB-zfL"/>
@@ -505,7 +505,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuq-wY-nCd">
-                                <rect key="frame" x="0.0" y="756" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="753" width="414" height="60"/>
                                 <color key="backgroundColor" name="BrandOrange"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="6mb-Fv-hKl"/>
@@ -519,26 +519,18 @@
                                     <segue destination="wBr-CB-RJl" kind="show" identifier="BackToHome" id="koL-DK-xKp"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xbL-Uo-bFV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xbL-Uo-bFV">
                                 <rect key="frame" x="0.0" y="80" width="414" height="585"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="585" id="5fr-ay-sbH"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodViewCell" rowHeight="44" id="sMi-Ef-9or">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodViewCell" rowHeight="125" id="sMi-Ef-9or">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sMi-Ef-9or" id="i5a-aR-ovg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodRatingViewCell" rowHeight="44" id="0Z0-Fi-D6w">
-                                        <rect key="frame" x="0.0" y="88.5" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Z0-Fi-D6w" id="85b-dV-hlC">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -550,15 +542,15 @@
                         <constraints>
                             <constraint firstItem="Tuq-wY-nCd" firstAttribute="leading" secondItem="IEO-dO-bBa" secondAttribute="leading" id="2FA-ED-BXt"/>
                             <constraint firstItem="Tuq-wY-nCd" firstAttribute="trailing" secondItem="IEO-dO-bBa" secondAttribute="trailing" id="2Rd-u8-2bb"/>
-                            <constraint firstItem="Tuq-wY-nCd" firstAttribute="top" secondItem="z8d-OE-hPf" secondAttribute="bottom" constant="8" symbolic="YES" id="8y7-4a-UX9"/>
-                            <constraint firstItem="Tuq-wY-nCd" firstAttribute="top" secondItem="z8d-OE-hPf" secondAttribute="bottom" constant="8" symbolic="YES" id="KZp-up-JEx"/>
+                            <constraint firstItem="z8d-OE-hPf" firstAttribute="leading" secondItem="IEO-dO-bBa" secondAttribute="leading" id="DkQ-3H-6C9"/>
+                            <constraint firstItem="z8d-OE-hPf" firstAttribute="trailing" secondItem="IEO-dO-bBa" secondAttribute="trailing" id="FAZ-Pz-3H9"/>
                             <constraint firstItem="xbL-Uo-bFV" firstAttribute="leading" secondItem="IEO-dO-bBa" secondAttribute="leading" id="QIl-9D-V9K"/>
+                            <constraint firstItem="z8d-OE-hPf" firstAttribute="top" secondItem="xbL-Uo-bFV" secondAttribute="bottom" constant="20" id="REJ-DT-gVW"/>
                             <constraint firstItem="z8d-OE-hPf" firstAttribute="leading" secondItem="IEO-dO-bBa" secondAttribute="leading" id="ToD-MW-Sim"/>
                             <constraint firstItem="z8d-OE-hPf" firstAttribute="trailing" secondItem="IEO-dO-bBa" secondAttribute="trailing" id="YdV-bq-aLe"/>
                             <constraint firstItem="xbL-Uo-bFV" firstAttribute="top" secondItem="IEO-dO-bBa" secondAttribute="top" constant="36" id="cjQ-ew-jAV"/>
-                            <constraint firstItem="z8d-OE-hPf" firstAttribute="top" secondItem="xbL-Uo-bFV" secondAttribute="bottom" constant="23" id="fFD-zD-QGH"/>
+                            <constraint firstItem="Tuq-wY-nCd" firstAttribute="top" secondItem="z8d-OE-hPf" secondAttribute="bottom" constant="8" symbolic="YES" id="hB8-Uf-DqX"/>
                             <constraint firstItem="xbL-Uo-bFV" firstAttribute="trailing" secondItem="IEO-dO-bBa" secondAttribute="trailing" id="ohl-km-59y"/>
-                            <constraint firstItem="IEO-dO-bBa" firstAttribute="bottom" secondItem="Tuq-wY-nCd" secondAttribute="bottom" constant="46" id="svJ-Ph-vfD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oBt-y6-QW3"/>
@@ -726,7 +718,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="olk-ee-9Y5"/>
+        <segue reference="koL-DK-xKp"/>
         <segue reference="Sjw-us-WCC"/>
         <segue reference="jJz-3M-7ph"/>
     </inferredMetricsTieBreakers>
