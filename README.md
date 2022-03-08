@@ -2,10 +2,10 @@
 
 An application built to test our knowledge with the modules learned during the first few weeks at Revature. It includes:
 
-    - Swift Data Types (Dictionaries)
+    - Swift Data and Collection Types
     - Swift Control Flow
     - View Controllers
-    - TableView and CollectionViewControllers via View Controllers
+    - TableView and CollectionView Controllers via View Controllers
     - CoreData
 
 ## Screenshots
