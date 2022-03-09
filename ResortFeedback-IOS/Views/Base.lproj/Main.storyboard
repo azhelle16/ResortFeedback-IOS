@@ -808,7 +808,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="wLt-My-VwY">
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="wLt-My-VwY">
                                 <rect key="frame" x="0.0" y="80" width="414" height="540"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -888,8 +888,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yHb-Ub-ZoI"/>
-        <segue reference="3Nw-7p-CMK"/>
-        <segue reference="ydm-cT-as3"/>
+        <segue reference="9Qv-eE-MxR"/>
+        <segue reference="Ra7-z3-B0c"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="constructionText" width="210.5" height="84.5"/>

@@ -135,7 +135,7 @@ class DBManager {
             return true
             //try myPersistentStoreCoordinator.execute(deleteRequest, with: myContext)
         } catch let error as NSError {
-            print("Data Not Deleted!")
+            print(error)
             return false
         }
         
