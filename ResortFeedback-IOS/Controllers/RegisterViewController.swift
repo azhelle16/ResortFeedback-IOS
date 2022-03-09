@@ -30,32 +30,31 @@ class RegisterViewController: UIViewController {
         //CHECK AVAILABILITY
         let isUnique = DBManager.inst.checkUserAvailability(u: regUserTextField.text!)
         
-        if isUnique == true {
+        switch isUnique {
             
-            //ADD DATA
-            let isSuccess = DBManager.inst.addData(u: regUserTextField.text!, p: regPasswordTextField.text!)
+            case 0:
+                //ADD DATA
+                let isSuccess = DBManager.inst.addData(u: regUserTextField.text!, p: regPasswordTextField.text!)
+                
+                if isSuccess == true {
+                    
+                    UserData.userInfo = regUserTextField.text!
+                    showAlertDialog(dtype: "Alert", msg: "Account Successfully Created", style: "alert", controller : r.registerSegue)
+                    
+                    //print("Under Construction!")
+                    
+                } else {
+                    
+                    showAlertDialog(dtype: "Alert", msg: "Account Not Successfully Created", style: "alert", controller: "")
+                  
+                  }
+            case 1:
+                showAlertDialog(dtype : "Error",  msg : "Username already exists!", style : "alert", controller: "")
+            default:
+                showAlertDialog(dtype : "Error",  msg : "Database Connection Error!", style : "alert", controller: "")
             
-            if isSuccess == true {
-                
-                UserData.userInfo = regUserTextField.text!
-                showAlertDialog(dtype: "Alert", msg: "Account Successfully Created", style: "alert", controller : r.registerSegue)
-                
-                //print("Under Construction!")
-                
-            } else {
-                
-                showAlertDialog(dtype: "Alert", msg: "Account Not Successfully Created", style: "alert", controller: "")
-              
-              }
             
-        } else {
-            
-            showAlertDialog(dtype : "Error",  msg : "Username already exists!", style : "alert", controller: "")
-        
-          }
-        
-        
-        
+        }
         
     }
     

@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  ResortFeedback-IOS
 //
-//  Created by Maricel Sumulong on 3/6/22.
+//  Created by Maricel Sumulong on 3/8/22.
 //
 //
 
@@ -18,6 +18,8 @@ extension User {
 
     @NSManaged public var password: String?
     @NSManaged public var username: String?
+    @NSManaged public var scores: String?
+    @NSManaged public var feedback: String?
 
 }
 

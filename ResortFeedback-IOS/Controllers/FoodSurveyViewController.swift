@@ -28,19 +28,31 @@ class FoodSurveyViewController: UIViewController {
     
     @IBAction func submitFoodResponse(_ sender: UIButton) {
         
-        let isSuccess = DBManager.inst.addUserFoodTally(u: UserData.userInfo, t: UserData.tallyScore.description)
+        let scoreArray = [Int](repeating: 0, count: r.questions.count)
+        var tallyArray = ["Food":scoreArray]
         
+        for key in UserData.tallyScore.keys {
+            tallyArray["Food"]![Int(key)!] = UserData.tallyScore[key]!
+            
+        }
+        
+        //print(tallyArray.description)
+        
+        
+        let isSuccess = DBManager.inst.addUserFoodTally(u: UserData.userInfo, t: tallyArray.description)
+
         if isSuccess == true {
-            
+
             showAlertDialog(dtype: "Alert", msg: "Response Successfully Saved! Redirecting You Back To Survey Home Page", style: "alert", controller : r.backToSurveyHome)
-            
+
             //print("Under Construction!")
-            
+
         } else {
-            
+
             showAlertDialog(dtype: "Alert", msg: "Response Not Successfully Saved.", style: "alert", controller: "")
-          
+
           }
+        
         
     }
     
@@ -144,29 +156,6 @@ extension FoodSurveyViewController: UITableViewDataSource {
 extension FoodSurveyViewController: UITableViewDelegate {
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
-//        if UserData.tallyScore.count != 0 {
-//            for key in UserData.tallyScore.keys{
-//                let indexPath = IndexPath(row: Int(key)!, section: 0)
-//                let cell = foodTableView.cellForRow(at: indexPath) as? FoodTableViewCell
-//                let selected = UserData.tallyScore[key]
-//
-//                switch selected {
-//                    case 1:
-//                        cell?.fRateImage1.alpha = 1
-//                    case 2:
-//                        cell?.fRateImage2.alpha = 1
-//                    case 3:
-//                        cell?.fRateImage3.alpha = 1
-//                    case 4:
-//                        cell?.fRateImage4.alpha = 1
-//                    default:
-//                        cell?.fRateImage5.alpha = 1
-//                }
-//
-//            }
-//
-//        }
         
     }
     

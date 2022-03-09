@@ -24,6 +24,14 @@ class LoginViewController: UIViewController {
         }
         
         //CHECK AVAILABILITY
+        
+        let exists = DBManager.inst.checkUserAvailability(u: logUserTextField.text!)
+        
+        if exists == 0 {
+            showAlertDialog(dtype : "Error",  msg : "Account doesn't exists. Please register first.", style : "alert", controller: "")
+            return
+        }
+        
         let isCorrect = DBManager.inst.login(u: logUserTextField.text!, p: logPasswordTextField.text!)
         
         if isCorrect.count != 0 {

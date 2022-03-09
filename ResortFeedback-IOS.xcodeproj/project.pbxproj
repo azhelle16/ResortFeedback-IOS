@@ -32,6 +32,10 @@
 		9A53934427D5B73F0018CACC /* FoodSurvey+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53934227D5B73F0018CACC /* FoodSurvey+CoreDataProperties.swift */; };
 		9A96BDC427D7B0E9009905A0 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96BDC227D7B0E9009905A0 /* FoodTableViewCell.swift */; };
 		9A96BDC527D7B0E9009905A0 /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A96BDC327D7B0E9009905A0 /* FoodTableViewCell.xib */; };
+		9AFFF7DA27D86A280011B3E6 /* DeleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFFF7D827D86A280011B3E6 /* DeleteTableViewCell.swift */; };
+		9AFFF7DB27D86A280011B3E6 /* DeleteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFFF7D927D86A280011B3E6 /* DeleteTableViewCell.xib */; };
+		9AFFF7DD27D86BA30011B3E6 /* DeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFFF7DC27D86BA30011B3E6 /* DeleteViewController.swift */; };
+		9AFFF7DF27D8857A0011B3E6 /* OverAllFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFFF7DE27D8857A0011B3E6 /* OverAllFeedbackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +67,10 @@
 		9A96BDC227D7B0E9009905A0 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		9A96BDC327D7B0E9009905A0 /* FoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
 		9AE8185427D5D0D800C49554 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9AFFF7D827D86A280011B3E6 /* DeleteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTableViewCell.swift; sourceTree = "<group>"; };
+		9AFFF7D927D86A280011B3E6 /* DeleteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteTableViewCell.xib; sourceTree = "<group>"; };
+		9AFFF7DC27D86BA30011B3E6 /* DeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteViewController.swift; sourceTree = "<group>"; };
+		9AFFF7DE27D8857A0011B3E6 /* OverAllFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverAllFeedbackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				9A14481C27D332F90004D4E3 /* Main.storyboard */,
+				9AFFF7D827D86A280011B3E6 /* DeleteTableViewCell.swift */,
+				9AFFF7D927D86A280011B3E6 /* DeleteTableViewCell.xib */,
 				9A53932427D5285B0018CACC /* HomeCollectionViewCell.swift */,
 				9A53932527D5285B0018CACC /* HomeCollectionViewCell.xib */,
 				9A53932D27D53D070018CACC /* SurveyOptionsCollectionViewCell.swift */,
@@ -136,8 +146,10 @@
 				9A14483127D35A030004D4E3 /* RegisterViewController.swift */,
 				9A14483327D35A1E0004D4E3 /* LoginViewController.swift */,
 				9A53931027D48F550018CACC /* HomeViewController.swift */,
+				9AFFF7DC27D86BA30011B3E6 /* DeleteViewController.swift */,
 				9A53932B27D53CDB0018CACC /* SurveyOptionsViewController.swift */,
 				9A53933527D561880018CACC /* FoodSurveyViewController.swift */,
+				9AFFF7DE27D8857A0011B3E6 /* OverAllFeedbackViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -209,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A53932727D5285B0018CACC /* HomeCollectionViewCell.xib in Resources */,
+				9AFFF7DB27D86A280011B3E6 /* DeleteTableViewCell.xib in Resources */,
 				9A96BDC527D7B0E9009905A0 /* FoodTableViewCell.xib in Resources */,
 				9A53933027D53D070018CACC /* SurveyOptionsCollectionViewCell.xib in Resources */,
 				9A14482627D332FC0004D4E3 /* LaunchScreen.storyboard in Resources */,
@@ -226,8 +239,10 @@
 			files = (
 				9A14483427D35A1E0004D4E3 /* LoginViewController.swift in Sources */,
 				9A53932F27D53D070018CACC /* SurveyOptionsCollectionViewCell.swift in Sources */,
+				9AFFF7DA27D86A280011B3E6 /* DeleteTableViewCell.swift in Sources */,
 				9A14481B27D332F90004D4E3 /* WelcomeViewController.swift in Sources */,
 				9A14483227D35A030004D4E3 /* RegisterViewController.swift in Sources */,
+				9AFFF7DF27D8857A0011B3E6 /* OverAllFeedbackViewController.swift in Sources */,
 				9A53932A27D533920018CACC /* UserData.swift in Sources */,
 				9A53932C27D53CDB0018CACC /* SurveyOptionsViewController.swift in Sources */,
 				9A14482127D332F90004D4E3 /* ResortFeedback_IOS.xcdatamodeld in Sources */,
@@ -239,6 +254,7 @@
 				9A53931127D48F550018CACC /* HomeViewController.swift in Sources */,
 				9A53933627D561880018CACC /* FoodSurveyViewController.swift in Sources */,
 				9A14483927D362220004D4E3 /* User+CoreDataClass.swift in Sources */,
+				9AFFF7DD27D86BA30011B3E6 /* DeleteViewController.swift in Sources */,
 				9A96BDC427D7B0E9009905A0 /* FoodTableViewCell.swift in Sources */,
 				9A14481927D332F90004D4E3 /* SceneDelegate.swift in Sources */,
 				9A14483A27D362220004D4E3 /* User+CoreDataProperties.swift in Sources */,

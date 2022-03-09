@@ -15,13 +15,15 @@ class SurveyOptionsViewController: UIViewController {
     var surveyChoices : [String] = [
         "Rooms",
         "Amenities",
-        "Food"
+        "Food",
+        "Overall Feedback"
     ]
     
     var surveyChoicesIcon : [String] = [
         "room",
         "amenities",
-        "food"
+        "food",
+        "feedback"
     ]
     
     override func viewDidLoad() {
@@ -32,6 +34,9 @@ class SurveyOptionsViewController: UIViewController {
         surveyCollectionView.dataSource = self
         surveyCollectionView.delegate = self
         surveyCollectionView.register(UINib(nibName: r.surveyNibName, bundle: nil), forCellWithReuseIdentifier: r.surveyCellIdentifier)
+        
+        let fixCenter = UserData()
+        fixCenter.centerCollectionView(collectionView: surveyCollectionView)
         
     }
     
@@ -80,6 +85,8 @@ extension SurveyOptionsViewController: UICollectionViewDelegate {
             case 2:
                 //print("Time To Answer Survey")
                 performSegue(withIdentifier: r.foodSegue, sender: self)
+            case 3:
+                performSegue(withIdentifier: r.feedbackSegue, sender: self)
             default:
                 //print("Under Construction")
                 performSegue(withIdentifier: r.constructionSegue2, sender: self)

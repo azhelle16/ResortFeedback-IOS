@@ -11,28 +11,28 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="ResortFeedback_IOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="251" height="172"/>
+            <rect key="frame" x="0.0" y="0.0" width="127" height="135"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="251" height="172"/>
+                <rect key="frame" x="0.0" y="0.0" width="127" height="135"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fDe-f6-ZwN">
-                        <rect key="frame" x="10" y="10" width="231" height="152"/>
+                        <rect key="frame" x="10" y="10" width="107" height="115"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kDB-MZ-dkL">
-                                <rect key="frame" x="75.5" y="0.0" width="80" height="80"/>
+                                <rect key="frame" x="21" y="0.0" width="65" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="N6J-xh-AHN"/>
-                                    <constraint firstAttribute="width" constant="80" id="NTE-ds-Mo9"/>
+                                    <constraint firstAttribute="height" constant="65" id="N6J-xh-AHN"/>
+                                    <constraint firstAttribute="width" constant="65" id="NTE-ds-Mo9"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkS-r4-hSh">
-                                <rect key="frame" x="0.0" y="88" width="231" height="64"/>
+                                <rect key="frame" x="0.0" y="73" width="107" height="42"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yId-Z5-prF">
-                                        <rect key="frame" x="10" y="10" width="211" height="44"/>
-                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="yId-Z5-prF">
+                                        <rect key="frame" x="10" y="0.0" width="87" height="32"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="14"/>
                                         <color key="textColor" name="BrandYellow"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -40,7 +40,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="yId-Z5-prF" secondAttribute="trailing" constant="10" id="Kf3-Lk-xm4"/>
                                     <constraint firstAttribute="bottom" secondItem="yId-Z5-prF" secondAttribute="bottom" constant="10" id="rl5-5n-kQZ"/>
-                                    <constraint firstItem="yId-Z5-prF" firstAttribute="top" secondItem="OkS-r4-hSh" secondAttribute="top" constant="10" id="sCh-jw-8ug"/>
+                                    <constraint firstItem="yId-Z5-prF" firstAttribute="top" secondItem="OkS-r4-hSh" secondAttribute="top" id="sCh-jw-8ug"/>
                                     <constraint firstItem="yId-Z5-prF" firstAttribute="leading" secondItem="OkS-r4-hSh" secondAttribute="leading" constant="10" id="sy0-e7-Y9c"/>
                                 </constraints>
                             </view>
@@ -55,12 +55,12 @@
                 <constraint firstItem="fDe-f6-ZwN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="smY-lw-nVf"/>
                 <constraint firstAttribute="bottom" secondItem="fDe-f6-ZwN" secondAttribute="bottom" constant="10" id="vJV-J1-iLt"/>
             </constraints>
-            <size key="customSize" width="251" height="172"/>
+            <size key="customSize" width="127" height="135"/>
             <connections>
                 <outlet property="homeImageView" destination="kDB-MZ-dkL" id="yB6-ew-dyb"/>
                 <outlet property="homeLabel" destination="yId-Z5-prF" id="k0J-d1-Esh"/>
             </connections>
-            <point key="canvasLocation" x="-13.768115942028986" y="51.5625"/>
+            <point key="canvasLocation" x="76.08695652173914" y="41.183035714285715"/>
         </collectionViewCell>
     </objects>
     <resources>

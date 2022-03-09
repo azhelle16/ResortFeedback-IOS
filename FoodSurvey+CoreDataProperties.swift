@@ -2,7 +2,7 @@
 //  FoodSurvey+CoreDataProperties.swift
 //  ResortFeedback-IOS
 //
-//  Created by Maricel Sumulong on 3/6/22.
+//  Created by Maricel Sumulong on 3/8/22.
 //
 //
 
@@ -16,8 +16,8 @@ extension FoodSurvey {
         return NSFetchRequest<FoodSurvey>(entityName: "FoodSurvey")
     }
 
-    @NSManaged public var username: String?
     @NSManaged public var tallyscore: String?
+    @NSManaged public var username: String?
 
 }
 
