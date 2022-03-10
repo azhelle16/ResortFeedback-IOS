@@ -27,6 +27,9 @@ struct r {
     static let deleteNibName = "DeleteTableViewCell"
     static let backToFeedbackHome = "BackToFeedbackHome"
     static let feedbackSegue = "OverAllFeedback"
+    static let editSurveyCellIdentifier = "EditSurveyChoiceCell"
+    static let editFoodCellIdentifier = "EditFoodViewCell"
+    static let editfoodNibName = "EditFoodTableViewCell"
 
 }
 
@@ -83,7 +86,8 @@ struct mainMenu {
         "Edit My Ratings",
         "Delete My Rating",
         "View Other's Ratings",
-        "Settings"
+        "Settings",
+        "Clear Database"
     ]
     
     var userChoicesIcon : [String] = [
@@ -92,7 +96,8 @@ struct mainMenu {
         "edit",
         "deleteRating",
         "response",
-        "settings"
+        "settings",
+        "cleardb"
     ]
     
 }
@@ -108,6 +113,8 @@ struct storyBoards {
     static let food_survey = "Food_Survey"
     static let feedback = "Feedback"
     static let upcoming = "Upcoming"
+    static let edit_survey = "Edit_Survey"
+    static let edit_food_survey = "Edit_Food_Survey"
     
 }
 

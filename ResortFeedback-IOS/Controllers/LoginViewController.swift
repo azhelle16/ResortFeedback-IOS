@@ -37,6 +37,9 @@ class LoginViewController: UIViewController {
         if isCorrect.count != 0 {
             
             UserData.userInfo = isCorrect[0].username!
+            UserData.userScore = isCorrect[0].scores!
+            UserData.userFeedback = isCorrect[0].feedback!
+            
             let lvc = storyboard?.instantiateViewController(withIdentifier: storyBoards.home) as! HomeViewController
             present(lvc, animated: true)
             //self.goToNextController(segueId: r.loginSegue)

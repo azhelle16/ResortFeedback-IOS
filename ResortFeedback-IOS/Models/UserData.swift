@@ -12,6 +12,9 @@ struct UserData {
     
     static var userInfo : String = ""
     static var tallyScore : [String : Int] = [:]
+    static var userScore : String = ""
+    static var userFeedback : String = ""
+    static var userScoreTracker : [String : Int] = [:]
     
     func centerCollectionView(collectionView: UICollectionView) {
         

@@ -30,6 +30,10 @@
 		9A53933627D561880018CACC /* FoodSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53933527D561880018CACC /* FoodSurveyViewController.swift */; };
 		9A53934327D5B73F0018CACC /* FoodSurvey+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53934127D5B73F0018CACC /* FoodSurvey+CoreDataClass.swift */; };
 		9A53934427D5B73F0018CACC /* FoodSurvey+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53934227D5B73F0018CACC /* FoodSurvey+CoreDataProperties.swift */; };
+		9A57B43827D9D9DD00EA5815 /* EditRatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A57B43727D9D9DD00EA5815 /* EditRatingsViewController.swift */; };
+		9A57B43A27D9DFD200EA5815 /* EditFoodSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A57B43927D9DFD200EA5815 /* EditFoodSurveyViewController.swift */; };
+		9A57B43D27D9E32600EA5815 /* EditFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A57B43B27D9E32600EA5815 /* EditFoodTableViewCell.swift */; };
+		9A57B43E27D9E32600EA5815 /* EditFoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A57B43C27D9E32600EA5815 /* EditFoodTableViewCell.xib */; };
 		9A96BDC427D7B0E9009905A0 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96BDC227D7B0E9009905A0 /* FoodTableViewCell.swift */; };
 		9A96BDC527D7B0E9009905A0 /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A96BDC327D7B0E9009905A0 /* FoodTableViewCell.xib */; };
 		9ACBB99627D97C5100DB0059 /* UnderConstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBB99527D97C5100DB0059 /* UnderConstructionViewController.swift */; };
@@ -65,6 +69,10 @@
 		9A53933527D561880018CACC /* FoodSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSurveyViewController.swift; sourceTree = "<group>"; };
 		9A53934127D5B73F0018CACC /* FoodSurvey+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodSurvey+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9A53934227D5B73F0018CACC /* FoodSurvey+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodSurvey+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9A57B43727D9D9DD00EA5815 /* EditRatingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRatingsViewController.swift; sourceTree = "<group>"; };
+		9A57B43927D9DFD200EA5815 /* EditFoodSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditFoodSurveyViewController.swift; path = "ResortFeedback-IOS/Views/EditFoodSurveyViewController.swift"; sourceTree = SOURCE_ROOT; };
+		9A57B43B27D9E32600EA5815 /* EditFoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFoodTableViewCell.swift; sourceTree = "<group>"; };
+		9A57B43C27D9E32600EA5815 /* EditFoodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditFoodTableViewCell.xib; sourceTree = "<group>"; };
 		9A96BDC227D7B0E9009905A0 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		9A96BDC327D7B0E9009905A0 /* FoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
 		9ACBB99527D97C5100DB0059 /* UnderConstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderConstructionViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +144,8 @@
 				9A53932E27D53D070018CACC /* SurveyOptionsCollectionViewCell.xib */,
 				9A96BDC227D7B0E9009905A0 /* FoodTableViewCell.swift */,
 				9A96BDC327D7B0E9009905A0 /* FoodTableViewCell.xib */,
+				9A57B43B27D9E32600EA5815 /* EditFoodTableViewCell.swift */,
+				9A57B43C27D9E32600EA5815 /* EditFoodTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,6 +153,7 @@
 		9A14482E27D333230004D4E3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9A57B43927D9DFD200EA5815 /* EditFoodSurveyViewController.swift */,
 				9A14481A27D332F90004D4E3 /* WelcomeViewController.swift */,
 				9A14483127D35A030004D4E3 /* RegisterViewController.swift */,
 				9A14483327D35A1E0004D4E3 /* LoginViewController.swift */,
@@ -152,6 +163,7 @@
 				9A53933527D561880018CACC /* FoodSurveyViewController.swift */,
 				9AFFF7DE27D8857A0011B3E6 /* OverAllFeedbackViewController.swift */,
 				9ACBB99527D97C5100DB0059 /* UnderConstructionViewController.swift */,
+				9A57B43727D9D9DD00EA5815 /* EditRatingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -226,6 +238,7 @@
 				9A53932727D5285B0018CACC /* HomeCollectionViewCell.xib in Resources */,
 				9AFFF7DB27D86A280011B3E6 /* DeleteTableViewCell.xib in Resources */,
 				9A96BDC527D7B0E9009905A0 /* FoodTableViewCell.xib in Resources */,
+				9A57B43E27D9E32600EA5815 /* EditFoodTableViewCell.xib in Resources */,
 				9A53933027D53D070018CACC /* SurveyOptionsCollectionViewCell.xib in Resources */,
 				9A14482627D332FC0004D4E3 /* LaunchScreen.storyboard in Resources */,
 				9A14482327D332FC0004D4E3 /* Assets.xcassets in Resources */,
@@ -247,14 +260,17 @@
 				9A14483227D35A030004D4E3 /* RegisterViewController.swift in Sources */,
 				9AFFF7DF27D8857A0011B3E6 /* OverAllFeedbackViewController.swift in Sources */,
 				9A53932A27D533920018CACC /* UserData.swift in Sources */,
+				9A57B43827D9D9DD00EA5815 /* EditRatingsViewController.swift in Sources */,
 				9A53932C27D53CDB0018CACC /* SurveyOptionsViewController.swift in Sources */,
 				9ACBB99627D97C5100DB0059 /* UnderConstructionViewController.swift in Sources */,
 				9A14482127D332F90004D4E3 /* ResortFeedback_IOS.xcdatamodeld in Sources */,
+				9A57B43D27D9E32600EA5815 /* EditFoodTableViewCell.swift in Sources */,
 				9A53934427D5B73F0018CACC /* FoodSurvey+CoreDataProperties.swift in Sources */,
 				9A53934327D5B73F0018CACC /* FoodSurvey+CoreDataClass.swift in Sources */,
 				9A14483C27D362690004D4E3 /* DBManager.swift in Sources */,
 				9A14481727D332F90004D4E3 /* AppDelegate.swift in Sources */,
 				9A53932627D5285B0018CACC /* HomeCollectionViewCell.swift in Sources */,
+				9A57B43A27D9DFD200EA5815 /* EditFoodSurveyViewController.swift in Sources */,
 				9A53931127D48F550018CACC /* HomeViewController.swift in Sources */,
 				9A53933627D561880018CACC /* FoodSurveyViewController.swift in Sources */,
 				9A14483927D362220004D4E3 /* User+CoreDataClass.swift in Sources */,

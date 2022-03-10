@@ -15,14 +15,30 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var welcomeTextView: UITextView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let homeOptions = mainMenu().userChoices
-    let homeIcons = mainMenu().userChoicesIcon
+    var homeOptions = mainMenu().userChoices
+    var homeIcons = mainMenu().userChoicesIcon
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+            if UserData.userScore == "" {
+        
+                homeOptions = [
+                    "Answer Survey",
+                    "View Other's Ratings",
+                    "Settings",
+                    "Clear Database"
+                ]
+        
+                homeIcons = [
+                    "survey",
+                    "response",
+                    "settings",
+                    "cleardb"
+                ]
+            }
         welcomeTextView.text = "Welcome, \(UserData.userInfo)!"
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -111,8 +127,19 @@ extension HomeViewController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: r.cellIdentifier, for: indexPath) as! HomeCollectionViewCell
             
-        cell.homeImageView.image = UIImage(named: homeIcons[indexPath.row])
-        cell.homeLabel.text = homeOptions[indexPath.row]
+        
+        if UserData.userInfo != "admin" && indexPath.row == homeOptions.count - 1 {
+            cell.homeLabel.text = ""
+            cell.homeImageView.image = UIImage()
+        } else if UserData.userScore == "" && [1,2,3].contains(indexPath.row) {
+            cell.homeImageView.image = UIImage(named: homeIcons[indexPath.row])
+            cell.homeLabel.text = homeOptions[indexPath.row]
+            //cell.isHidden = true
+            cell.isUserInteractionEnabled = true
+        } else {
+            cell.homeImageView.image = UIImage(named: homeIcons[indexPath.row])
+            cell.homeLabel.text = homeOptions[indexPath.row]
+          }
         
         return cell
         
@@ -129,6 +156,11 @@ extension HomeViewController: UICollectionViewDelegate {
             case 0:
                 let hvc = storyboard?.instantiateViewController(withIdentifier: storyBoards.survey) as! SurveyOptionsViewController
                 present(hvc, animated: true, completion: nil)
+            case 2:
+                let hvc = storyboard?.instantiateViewController(withIdentifier: storyBoards.edit_survey) as! EditRatingsViewController
+                present(hvc, animated: true, completion: nil)
+            case 6:
+                showAlertDialog(dtype: "Confirm", msg: "This action can't be undone. Do you still want to proceed?", style: "alert", controller: "1")
             default:
                 let hvc = storyboard?.instantiateViewController(withIdentifier: storyBoards.upcoming) as! UnderConstructionViewController
                 present(hvc, animated: true, completion: nil)

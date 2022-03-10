@@ -125,6 +125,7 @@ class DBManager {
         
         let fReq: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "User")
         fReq.predicate = NSPredicate(format: "username!='admin'")
+        //fReq.predicate = NSPredicate(format: "username!=''")
         //let bobPredicate = NSPredicate(format: "firstName = 'Bob'")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fReq)
 
