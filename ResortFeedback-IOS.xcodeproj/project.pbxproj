@@ -32,6 +32,7 @@
 		9A53934427D5B73F0018CACC /* FoodSurvey+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53934227D5B73F0018CACC /* FoodSurvey+CoreDataProperties.swift */; };
 		9A96BDC427D7B0E9009905A0 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96BDC227D7B0E9009905A0 /* FoodTableViewCell.swift */; };
 		9A96BDC527D7B0E9009905A0 /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A96BDC327D7B0E9009905A0 /* FoodTableViewCell.xib */; };
+		9ACBB99627D97C5100DB0059 /* UnderConstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBB99527D97C5100DB0059 /* UnderConstructionViewController.swift */; };
 		9AFFF7DA27D86A280011B3E6 /* DeleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFFF7D827D86A280011B3E6 /* DeleteTableViewCell.swift */; };
 		9AFFF7DB27D86A280011B3E6 /* DeleteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFFF7D927D86A280011B3E6 /* DeleteTableViewCell.xib */; };
 		9AFFF7DD27D86BA30011B3E6 /* DeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFFF7DC27D86BA30011B3E6 /* DeleteViewController.swift */; };
@@ -66,6 +67,7 @@
 		9A53934227D5B73F0018CACC /* FoodSurvey+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodSurvey+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9A96BDC227D7B0E9009905A0 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		9A96BDC327D7B0E9009905A0 /* FoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
+		9ACBB99527D97C5100DB0059 /* UnderConstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderConstructionViewController.swift; sourceTree = "<group>"; };
 		9AE8185427D5D0D800C49554 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9AFFF7D827D86A280011B3E6 /* DeleteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTableViewCell.swift; sourceTree = "<group>"; };
 		9AFFF7D927D86A280011B3E6 /* DeleteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteTableViewCell.xib; sourceTree = "<group>"; };
@@ -118,7 +120,6 @@
 				9A14482427D332FC0004D4E3 /* LaunchScreen.storyboard */,
 				9A14482727D332FC0004D4E3 /* Info.plist */,
 				9A14481F27D332F90004D4E3 /* ResortFeedback_IOS.xcdatamodeld */,
-				9A53931227D493540018CACC /* Constants.swift */,
 			);
 			path = "ResortFeedback-IOS";
 			sourceTree = "<group>";
@@ -150,6 +151,7 @@
 				9A53932B27D53CDB0018CACC /* SurveyOptionsViewController.swift */,
 				9A53933527D561880018CACC /* FoodSurveyViewController.swift */,
 				9AFFF7DE27D8857A0011B3E6 /* OverAllFeedbackViewController.swift */,
+				9ACBB99527D97C5100DB0059 /* UnderConstructionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				9A53932927D533920018CACC /* UserData.swift */,
+				9A53931227D493540018CACC /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				9AFFF7DF27D8857A0011B3E6 /* OverAllFeedbackViewController.swift in Sources */,
 				9A53932A27D533920018CACC /* UserData.swift in Sources */,
 				9A53932C27D53CDB0018CACC /* SurveyOptionsViewController.swift in Sources */,
+				9ACBB99627D97C5100DB0059 /* UnderConstructionViewController.swift in Sources */,
 				9A14482127D332F90004D4E3 /* ResortFeedback_IOS.xcdatamodeld in Sources */,
 				9A53934427D5B73F0018CACC /* FoodSurvey+CoreDataProperties.swift in Sources */,
 				9A53934327D5B73F0018CACC /* FoodSurvey+CoreDataClass.swift in Sources */,

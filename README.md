@@ -44,3 +44,6 @@ An application built to test our knowledge with the modules learned during the f
 ## Note
 This is a group project under the supervision of Ms. Asha Rani
 
+Icons: 
+
+***https://www.flaticon.com/authors/freepik***

@@ -28,7 +28,7 @@ class FoodSurveyViewController: UIViewController {
     
     @IBAction func submitFoodResponse(_ sender: UIButton) {
         
-        let scoreArray = [Int](repeating: 0, count: r.questions.count)
+        let scoreArray = [Int](repeating: 0, count: questions.foodQuestions.count)
         var tallyArray = ["Food":scoreArray]
         
         for key in UserData.tallyScore.keys {
@@ -67,7 +67,9 @@ class FoodSurveyViewController: UIViewController {
                 //ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in})
                 ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
                     if controller != "" {
-                        self.goToNextController(segueId: controller)
+                        //self.goToNextController(segueId: controller)
+                        let fvc = self.storyboard?.instantiateViewController(withIdentifier: storyBoards.survey) as! SurveyOptionsViewController
+                        self.present(fvc, animated: true, completion: nil)
                     }
                 })
                 dialogMessage.addAction(ok)
@@ -84,15 +86,14 @@ class FoodSurveyViewController: UIViewController {
         performSegue(withIdentifier: segueId, sender: nil)
         
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backToSurveyPressed(_ sender: UIButton) {
+        
+        let fvc = storyboard?.instantiateViewController(withIdentifier: storyBoards.survey) as! SurveyOptionsViewController
+        present(fvc, animated: true, completion: nil)
+
     }
-    */
+    
 
 }
 
@@ -105,7 +106,7 @@ extension FoodSurveyViewController: UITableViewDataSource {
             case 0:
                 //print("ROWS: ",r.questions.count * 2)
                 //return r.questions.count + 1
-            return min(r.questions.count, 15)
+            return min(questions.foodQuestions.count, 15)
             default:
                 return 0
             
@@ -121,7 +122,7 @@ extension FoodSurveyViewController: UITableViewDataSource {
             
                 let cell = tableView.dequeueReusableCell(withIdentifier: r.foodCellIdentifier, for: indexPath) as! FoodTableViewCell
                 
-                cell.question.text = r.questions[indexPath.row]
+                cell.question.text = questions.foodQuestions[indexPath.row]
                 let qNum = indexPath.row
                 cell.fRateImage1.accessibilityIdentifier = String(qNum)+"-1"
                 cell.fRateImage2.accessibilityIdentifier = String(qNum)+"-2"

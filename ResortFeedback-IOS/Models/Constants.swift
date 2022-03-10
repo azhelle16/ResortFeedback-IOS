@@ -28,7 +28,11 @@ struct r {
     static let backToFeedbackHome = "BackToFeedbackHome"
     static let feedbackSegue = "OverAllFeedback"
 
-    static let questions = [
+}
+
+struct questions {
+    
+    static let foodQuestions = [
         "1. The food is served fresh and hot.",
         "2. The menu has a good variety of items.",
         "3. The quality of food is excellent.",
@@ -48,3 +52,68 @@ struct r {
     ]
     
 }
+
+struct mainMenu {
+    
+    var surveyChoices : [String] = [
+        "Resort Rooms",
+        "Gym",
+        "Food",
+        "Conference Rooms",
+        "Spa",
+        "Wifi",
+        "Parking Area",
+        "Overall Feedback"
+    ]
+    
+    var surveyChoicesIcon : [String] = [
+        "room",
+        "gym",
+        "food",
+        "conference",
+        "spa",
+        "wifi",
+        "parking",
+        "feedback"
+    ]
+    
+    var userChoices : [String] = [
+        "Answer Survey",
+        "View My Ratings",
+        "Edit My Ratings",
+        "Delete My Rating",
+        "View Other's Ratings",
+        "Settings"
+    ]
+    
+    var userChoicesIcon : [String] = [
+        "survey",
+        "review",
+        "edit",
+        "deleteRating",
+        "response",
+        "settings"
+    ]
+    
+}
+
+struct storyBoards {
+    
+    static let welcome = "Welcome"
+    static let register = "Register"
+    static let login = "Login"
+    static let home = "Home"
+    static let delete = "Delete"
+    static let survey = "Survey"
+    static let food_survey = "Food_Survey"
+    static let feedback = "Feedback"
+    static let upcoming = "Upcoming"
+    
+}
+
+/*
+ Food Table View Cells Image
+ trailing and leading
+ +42 for iphone 12 pro
+ +52.5 for iphone 13 pro max
+ */

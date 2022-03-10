@@ -37,7 +37,9 @@ class LoginViewController: UIViewController {
         if isCorrect.count != 0 {
             
             UserData.userInfo = isCorrect[0].username!
-            self.goToNextController(segueId: r.loginSegue)
+            let lvc = storyboard?.instantiateViewController(withIdentifier: storyBoards.home) as! HomeViewController
+            present(lvc, animated: true)
+            //self.goToNextController(segueId: r.loginSegue)
             
         } else {
             
@@ -76,15 +78,10 @@ class LoginViewController: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    @IBAction func backButtonToWelcomePressed(_ sender: UIButton) {
         
-        //this function is for data passing
-        
-//        let hvc = segue.destination as! HomeViewController
-//
-//        hvc.currUser = currUser
+        self.dismiss(animated: true, completion: nil)
         
     }
-    
     
 }

@@ -15,33 +15,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var welcomeTextView: UITextView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var currUser : String = ""
-    
-//    var screenSize: CGRect!
-//    var screenWidth: CGFloat!
-//    var screenHeight: CGFloat!
-    
-    var userChoices : [String] = [
-        "Answer Survey",
-        "View Other's Ratings",
-        "Change Username",
-        "Change Password",
-        "View My Ratings",
-        "Edit My Ratings",
-        "Delete My Rating",
-        "Clear Database"
-    ]
-    
-    var userChoicesIcon : [String] = [
-        "survey",
-        "response",
-        "username",
-        "password",
-        "review",
-        "edit",
-        "deleteRating",
-        "cleardb"
-    ]
+    let homeOptions = mainMenu().userChoices
+    let homeIcons = mainMenu().userChoicesIcon
     
     override func viewDidLoad() {
         
@@ -114,43 +89,30 @@ class HomeViewController: UIViewController {
         
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func logoutButtonPressed(_ sender: UIButton) {
+        
+        let hvc = storyboard?.instantiateViewController(withIdentifier: storyBoards.welcome) as! WelcomeViewController
+        present(hvc, animated: true, completion: nil)
+        
     }
-    */
-
+    
 }
 
 extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return userChoices.count
+        return homeOptions.count
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: r.cellIdentifier, for: indexPath) as! HomeCollectionViewCell
-        
-        if UserData.userInfo != "admin" && indexPath.row == userChoices.count - 1 {
-    
-            cell.homeImageView.image = UIImage()
-            cell.homeLabel.text = ""
             
-        } else {
-            
-            cell.homeImageView.image = UIImage(named: userChoicesIcon[indexPath.row])
-            cell.homeLabel.text = userChoices[indexPath.row]
-        
-          }
+        cell.homeImageView.image = UIImage(named: homeIcons[indexPath.row])
+        cell.homeLabel.text = homeOptions[indexPath.row]
         
         return cell
         
@@ -165,16 +127,11 @@ extension HomeViewController: UICollectionViewDelegate {
         
         switch indexPath.item {
             case 0:
-                //print("Time To Answer Survey")
-                performSegue(withIdentifier: r.surveySegue, sender: self)
-            case 7:
-                //print("Clears Database")
-                //performSegue(withIdentifier: r.hometoDelete, sender: self)
-                showAlertDialog(dtype: "Confirm", msg: "This action can't be undone. Do you still want to proceed?", style: "alert", controller: "1")
-            
+                let hvc = storyboard?.instantiateViewController(withIdentifier: storyBoards.survey) as! SurveyOptionsViewController
+                present(hvc, animated: true, completion: nil)
             default:
-                //print("Under Construction")
-                performSegue(withIdentifier: r.constructionSegue, sender: self)
+                let hvc = storyboard?.instantiateViewController(withIdentifier: storyBoards.upcoming) as! UnderConstructionViewController
+                present(hvc, animated: true, completion: nil)
         }
         
     }

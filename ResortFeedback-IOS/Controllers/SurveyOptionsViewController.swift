@@ -12,19 +12,8 @@ class SurveyOptionsViewController: UIViewController {
     @IBOutlet weak var surveyIntroTextView: UITextView!
     @IBOutlet weak var surveyCollectionView: UICollectionView!
     
-    var surveyChoices : [String] = [
-        "Rooms",
-        "Amenities",
-        "Food",
-        "Overall Feedback"
-    ]
-    
-    var surveyChoicesIcon : [String] = [
-        "room",
-        "amenities",
-        "food",
-        "feedback"
-    ]
+    let surveyOptions = mainMenu().surveyChoices
+    let surveyIcons = mainMenu().surveyChoicesIcon
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,16 +29,13 @@ class SurveyOptionsViewController: UIViewController {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backToHomePressed(_ sender: UIButton) {
+        
+        let svc = storyboard?.instantiateViewController(withIdentifier: storyBoards.home) as! HomeViewController
+        present(svc, animated: true, completion: nil)
+        
     }
-    */
+    
 
 }
 
@@ -57,7 +43,7 @@ extension SurveyOptionsViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return surveyChoices.count
+        return surveyOptions.count
 
     }
 
@@ -66,8 +52,8 @@ extension SurveyOptionsViewController: UICollectionViewDataSource {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: r.surveyCellIdentifier, for: indexPath) as! SurveyOptionsCollectionViewCell
 
-        cell.surveyImageView.image = UIImage(named: surveyChoicesIcon[indexPath.row])
-        cell.surveyLabel.text = surveyChoices[indexPath.row]
+        cell.surveyImageView.image = UIImage(named: surveyIcons[indexPath.row])
+        cell.surveyLabel.text = surveyOptions[indexPath.row]
 
         return cell
 
@@ -82,14 +68,35 @@ extension SurveyOptionsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         switch indexPath.item {
+            
+            case 0:
+                let svc = storyboard?.instantiateViewController(withIdentifier: storyBoards.upcoming) as! UnderConstructionViewController
+                present(svc, animated: true, completion: nil)
+            case 1:
+                let svc = storyboard?.instantiateViewController(withIdentifier: storyBoards.upcoming) as! UnderConstructionViewController
+                present(svc, animated: true, completion: nil)
             case 2:
-                //print("Time To Answer Survey")
-                performSegue(withIdentifier: r.foodSegue, sender: self)
+                let svc = storyboard?.instantiateViewController(withIdentifier: storyBoards.food_survey) as! FoodSurveyViewController
+                present(svc, animated: true, completion: nil)
             case 3:
-                performSegue(withIdentifier: r.feedbackSegue, sender: self)
+                let svc = storyboard?.instantiateViewController(withIdentifier: storyBoards.upcoming) as! UnderConstructionViewController
+                present(svc, animated: true, completion: nil)
+            case 4:
+                let svc = storyboard?.instantiateViewController(withIdentifier: storyBoards.upcoming) as! UnderConstructionViewController
+                present(svc, animated: true, completion: nil)
+            case 5:
+                let svc = storyboard?.instantiateViewController(withIdentifier: storyBoards.upcoming) as! UnderConstructionViewController
+                present(svc, animated: true, completion: nil)
+            case 6:
+                let svc = storyboard?.instantiateViewController(withIdentifier: storyBoards.upcoming) as! UnderConstructionViewController
+                present(svc, animated: true, completion: nil)
+            case 7:
+                let svc = storyboard?.instantiateViewController(withIdentifier: storyBoards.feedback) as! OverAllFeedbackViewController
+                present(svc, animated: true, completion: nil)
             default:
-                //print("Under Construction")
-                performSegue(withIdentifier: r.constructionSegue2, sender: self)
+                let svc = storyboard?.instantiateViewController(withIdentifier: storyBoards.upcoming) as! UnderConstructionViewController
+                present(svc, animated: true, completion: nil)
+            
         }
         
     }

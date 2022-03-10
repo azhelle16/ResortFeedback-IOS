@@ -69,7 +69,9 @@ class RegisterViewController: UIViewController {
                 //ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in})
                 ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
                     if controller != "" {
-                        self.goToNextController(segueId: controller)
+                        //self.goToNextController(segueId: controller)
+                        let rvc = self.storyboard?.instantiateViewController(withIdentifier: storyBoards.home) as! HomeViewController
+                        self.present(rvc, animated: true)
                     }
                 })
                 dialogMessage.addAction(ok)
@@ -87,14 +89,10 @@ class RegisterViewController: UIViewController {
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backToWelcomePressed(_ sender: UIButton) {
+        
+        self.dismiss(animated: true, completion: nil)
+        
     }
-    */
-
+    
 }
